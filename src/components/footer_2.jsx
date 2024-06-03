@@ -13,6 +13,7 @@ function Footer({ onAdd, onBack, onDelete, adjustPageExtension, showBackButton }
     const dumbCheck = (event) => {
         console.log("FUCKYOU")
     };
+    
 
     return (
         <div id="page-extension">
