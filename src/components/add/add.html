@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="add.css" rel="stylesheet">
+    <title>MyFilmRatings</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <!-- <header class="header">
+
+
+            <button class="settings-button">
+                <img src="settings.png" alt="Settings">
+            </button>
+
+        </header> -->
+
+        <h1>Add Film/TV-Show</h1>
+        <div id="settings" class="settings">
+
+            <h2>Settings</h2>
+            <p>Commands Mac:</p>
+            <p>cmd A = add</p>
+            <p>cmd S = settings</p>
+            <!-- Add your form elements here -->
+            <form id="settings-form">
+
+            </form>
+            <button class="close-button">Close</button>
+
+        </div>
+
+        <div id="add-site" class="add-site">
+            <div class="overlay-content">
+
+                <form id="addFolderForm">
+
+                    <input type="text" placeholder="Title" required tabindex="1">
+                    <input type="text" placeholder="Director" required tabindex="2">
+                    <input type="number" placeholder="Year" required tabindex="3">
+
+
+                    <label>Type of Content:</label>
+                    <div class="radio-buttons">
+
+                        <input type="radio" id="radio-button-1" name="contentType" value="film" required>
+                        <label for="radio-button-1" tabindex="4">FILM</label>
+
+                        <input type="radio" id="radio-button-2" name="contentType" value="tv" required>
+                        <label for="radio-button-2" tabindex="5">TV</label>
+
+                    </div>
+                    <label for="genre">Genre:</label>
+                    <div class="dropdown">
+                        
+                        <input type="text" id="genre" required tabindex="6">
+                        <div id="dropdown" class="dropdown-content">
+                            <!-- JavaScript will populate this -->
+                        </div>
+                        <div id="selected-genres"></div>
+                    </div>
+
+
+
+
+
+                    <label for="durationHours">Duration (hours):</label>
+                    <input type="number" id="durationHours" required tabindex="7">
+                    <label for="durationMinutes">Duration (minutes):</label>
+                    <input type="number" id="durationMinutes" required tabindex="8">
+
+
+                    <label>Have you seen it or not?</label>
+                    <div class="radio-buttons">
+
+                        <input type="radio" id="radio-button-3" name="watched" value="no" required>
+                        <label for="radio-button-3" tabindex="9">NO</label>
+
+                        <input type="radio" id="radio-button-4" name="watched" value="yes" required>
+                        <label for="radio-button-4" tabindex="10">Yes</label>
+
+                    </div>
+
+
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" min="0" max="10" required tabindex="11">
+
+                    <label for="priority">Priority:</label>
+                    <input type="number" id="priority" min="1" required tabindex="12">
+
+                    <label for="imgUrl">Image URL:</label>
+                    <input type="text" id="imgUrl" required tabindex="13">
+
+                    <div class="custom-checkbox">
+
+                        <input name="favourite" type="checkbox" id="custom-checkbox" class="custom-checkbox">
+                        <label for="custom-checkbox" tabindex="14">FAVOURITE</label>
+
+                    </div>
+                </form>
+
+                <script>
+                    // JavaScript code to handle Enter key press for radio buttons and checkboxes
+                    document.addEventListener('keydown', function (event) {
+                        if (event.key === 'Enter') {
+                            const activeElement = document.activeElement;
+                            if (activeElement.tagName === 'LABEL') {
+                                const inputId = activeElement.getAttribute('for');
+                                const input = document.getElementById(inputId);
+                                if (input && (input.type === 'radio' || input.type === 'checkbox')) {
+                                    input.checked = !input.checked;
+                                }
+                            }
+                        }
+                    });
+                </script>
+
+                <div id="page-extension"></div>
+                <footer class="footer">
+                    <div class="footer-container">
+                        <div class="end-buttons">
+                            <a href="index.html" id="back-button">BACK</a>
+                            <button href="index.html" form="addFolderForm" type="submit" class="add-button">ADD</button>
+                        </div>
+                </footer>
+            </div>
+        </div>
+
+
+        <script src="add.js"></script>
+</body>
+
+</html>

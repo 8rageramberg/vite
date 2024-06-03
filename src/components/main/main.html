@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>MyFilmRatings</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+
+      <button class="settings-button">
+        <img src="settings.png" alt="Settings">
+
+      </button>
+      <!-- Header content -->
+    </header>
+
+
+    <div id="settings" class="settings">
+      <div class="settings-content">
+        <h2>Settings</h2>
+        <p>Commands Mac:</p>
+        <p>cmd A = add</p>
+        <p>cmd S = settings</p>
+        <p>cmd P = Secret</p>
+
+        <!-- Add your form elements here -->
+        <form id="settings-form">
+          <p>Best resolutions for image is image adress from IMDB's posters</p>
+        </form>
+        <button class="close-button">CLOSE</button>
+        <button class="default-films">ADD DEFAULT FILMS</button>
+      </div>
+    </div>
+
+
+    <h1>Film/TV-Ratings</h1>
+    <!-- Content -->
+    <aside class="content">
+      <div class="card-container">
+        <!-- Cards will be dynamically added here -->
+        <ul>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="page-extension"></div>
+  <footer class="footer">
+
+
+    <div class="options-dropdown">
+      <div class="options-content">
+
+        <input type="text" class="search-input" id="temp" placeholder="Search...">
+
+      </div>
+
+      <div class="footer-container">
+        <button class="delete-button">DELETE </button>
+        <button class="sort-button">SORT</button>
+        <button class="options-toggle">▵</button>
+        <a href="add.html" class="add-button" id="add-button">ADD</a>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

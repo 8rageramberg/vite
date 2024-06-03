@@ -1,0 +1,323 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: antiquewhite;
+    font-size: 16px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+button,
+a {
+    flex: 1;
+    width: 100%;
+    padding: 16px;
+    background-color: rgb(0, 140, 190);
+    margin: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 25px;
+    font-family: 'Special Elite', system-ui;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+button:hover,
+a:hover {
+    background-color: #0056b3;
+}
+
+/* settings */
+.settings-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: antiquewhite;
+}
+
+.settings.show {
+    display: flex;
+}
+
+.settings-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.settings-button img,
+.settings-button button {
+    width: 25px;
+    height: 25px;
+    padding: 20px;
+    margin: 5px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.add-site {
+    width: calc(100% - 32px);
+    /* Calculate width with 16px margin on each side */
+    max-width: 600px;
+    /* Set maximum width for the content */
+    margin: 0 auto;
+    /* Center the content horizontally */
+    padding: 0 16px;
+    /* Set padding on each side */
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+    .add-site {
+        padding: 0 16px;
+        /* Set padding on each side */
+    }
+}
+
+@media (min-height: 900px) {
+    .add-site {
+        height: 100vh;
+        /* Set the height to 100% of the viewport height */
+        max-height: 900px;
+        /* Set a maximum height if needed */
+    }
+}
+
+
+/* form */
+/* radio buttons */
+.radio-button:checked~label,
+.custom-checkbox~label {
+    color: blue;
+}
+
+.radio-buttons input[type="radio"],
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.radio-buttons label,
+.custom-checkbox label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin: 16px;
+    border-radius: 20px;
+    background-color: rgb(0, 140, 190);
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.radio-buttons input[type="radio"]:checked+label,
+.custom-checkbox input[type="checkbox"]:checked+label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: red;
+}
+
+/* Optional: Add hover effect */
+.radio-buttons label:hover,
+.custom-checkbox label:hover {
+    background-color: #cceeff;
+    /* Light blue background on hover */
+}
+
+/* Optional: Add focus effect */
+.radio-buttons label:focus,
+.custom-checkbox label:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.radio-buttons,
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    align-items: center;
+    margin-bottom: 10px;
+    /* Adjust spacing between form items */
+}
+
+
+label {
+    display: inline;
+    vertical-align: top;
+}
+
+.end-buttons {
+    margin: 16px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.fav {
+    width: 100%;
+    display: flex;
+}
+
+form input,
+form select,
+form textarea,
+.dropdown {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 8px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-items: center;
+    /* Center items vertically */
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Dropdown */
+.dropdown{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dropdown-content div {
+    padding-left: 16px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#selected-genres {
+    margin-top: 10px;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.selected-genre {
+    background-color: #e1e1e1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.selected-genre span {
+    margin-right: 5px;
+}
+
+.selected-genre button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    
+}
