@@ -4,7 +4,7 @@ function Header({ toggleSettings }) {
     return (
         <header className="header">
             <button className="settings-button" onClick={toggleSettings}>
-                <img src="src/assets/settings.png" alt="Settings" />
+                <img src="src/settings.png" alt="Settings" />
             </button>
         </header>
     );
